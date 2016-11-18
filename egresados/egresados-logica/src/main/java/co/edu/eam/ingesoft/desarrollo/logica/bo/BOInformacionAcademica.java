@@ -31,12 +31,12 @@ public class BOInformacionAcademica {
      * @throws Exception
      */
     public void crear(InformacionAcademica informacionAcademica) throws Exception{
-        if (daoInfoAcademica.buscar(informacionAcademica.getCedEgresado()) != null) {
-            throw new ExcepcionNegocio("Ya existe una informacion academica con la cédula "
-                    + informacionAcademica.getCedEgresado());
-        } else {
+//        if (daoInfoAcademica.buscar(informacionAcademica.getCedEgresado()) != null) {
+//            throw new ExcepcionNegocio("Ya existe una informacion academica con la cédula "
+//                    + informacionAcademica.getCedEgresado());
+//        } else {
         	daoInfoAcademica.crear(informacionAcademica);
-        }
+//        }
     }
     
     /**

@@ -6,21 +6,56 @@
 package co.edu.eam.ingesoft.egresados.vista.gui;
 
 import java.awt.Color;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Egresado;
+import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Empresa;
+import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.OfertaLaboral;
+import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Programa;
+import co.edu.eam.ingesoft.egresados.vista.controladores.ControladorOfertasPrograma;
 
 /**
+ * Ventana para el reporte de ofertas por programa
  *
- * @author vanegas
+ * @author Richard Alexander Vanegas Ochoa<br/>
+ *         email: Richardvanegas8@gmail.com <br/>
+ *         Fecha: 23/10/2015<br/>
  */
 public class VentanaOfertasPrograma extends javax.swing.JFrame {
 
+	private ControladorOfertasPrograma controlador;
     /**
      * Creates new form VentanaEmpleadosEmpresa
      */
     public VentanaOfertasPrograma() {
         initComponents();
         this.getContentPane().setBackground(Color.GREEN);
+        controlador = new ControladorOfertasPrograma();
+        try {
+			llenarComboPrograma();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Hubo un error cargando el combo");
+			e.printStackTrace();
+		}
     }
 
+    /**
+	 * Método para llenar el combo de programas
+	 * 
+	 * @throws Exception
+	 */
+	private void llenarComboPrograma() throws Exception {
+		cbPrograma.removeAllItems();
+		List<Programa> lista = controlador.listarProgramas();
+		cbPrograma.addItem("Seleccione un programa");
+		for (Programa programa : lista) {
+			cbPrograma.addItem(programa);
+		}
+	}
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,6 +95,11 @@ public class VentanaOfertasPrograma extends javax.swing.JFrame {
         jLabel2.setText("Programa academico");
 
         btnReporte.setText("GENERAR REPORTE");
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -121,10 +161,41 @@ public class VentanaOfertasPrograma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        // TODO add your handling code here:
+    	Programa pro = (Programa) cbPrograma.getSelectedItem();
+		if (cbPrograma.getSelectedIndex() == 0) {
+			JOptionPane.showMessageDialog(null, "Debe seleccionar un programa");
+		} else {
+			llenarTabla(pro);
+		}
+    }//GEN-LAST:event_btnReporteActionPerformed
 
+    /**
+     * Metodo para llenar tabla con las ofertas laborales de un programa
+     * @param pro, programa por el cual se llenara la tabla
+     */
+    public void llenarTabla(Programa pro) {
+
+		try {
+			List<OfertaLaboral> lista = controlador.listarOfertas(pro);
+
+			DefaultTableModel dtm = (DefaultTableModel) tablaEgresados.getModel();
+			dtm.setRowCount(0);
+			for (OfertaLaboral ofer : lista) {
+				dtm.addRow(new Object[] { ofer.getEmpresa().getRazonSocial(), ofer.getFechaApertura(),
+						ofer.getFechaCierre(), ofer.getCargo(),ofer.getSalario(),ofer.getDescripcion() });
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnReporte;
-    private javax.swing.JComboBox<String> cbPrograma;
+    private javax.swing.JComboBox cbPrograma;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;

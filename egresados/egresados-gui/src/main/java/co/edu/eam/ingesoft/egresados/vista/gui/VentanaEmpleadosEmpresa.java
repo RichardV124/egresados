@@ -55,6 +55,10 @@ public class VentanaEmpleadosEmpresa extends javax.swing.JFrame {
 		}
 	}
 
+	/**
+     * Metodo para llenar tabla
+     * @param emp, empresa por el cual se llenara la tabla
+     */
 	public void llenartabla(Empresa emp) {
 
 		try {

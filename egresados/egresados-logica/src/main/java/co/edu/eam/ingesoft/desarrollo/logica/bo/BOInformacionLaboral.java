@@ -36,12 +36,12 @@ public class BOInformacionLaboral {
      * @throws Exception
      */
     public void crear(InformacionLaboral informacionLaboral) throws Exception{
-        if (daoInfoLaboral.buscar(informacionLaboral.getCedEgresado()) != null) {
-            throw new ExcepcionNegocio("Ya existe una informacion Laboral con la cédula "
-                    + informacionLaboral.getCedEgresado());
-        } else {
+//        if (daoInfoLaboral.buscar(informacionLaboral.getCedEgresado()) != null) {
+//            throw new ExcepcionNegocio("Ya existe una informacion Laboral con la cédula "
+//                    + informacionLaboral.getCedEgresado());
+//        } else {
         	daoInfoLaboral.crear(informacionLaboral);
-        }
+//        }
     }
     
     /**

@@ -126,48 +126,88 @@ public class VentanaRegistroEgresados extends javax.swing.JFrame {
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de tipodocumento
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarTipoDocumento() {
 		for (TipoDocumentoEnum lista : TipoDocumentoEnum.values()) {
 			cbTipoDocumento.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de tipoCorreo
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarTipoCorreo() {
 		for (TipoCorreoEnum lista : TipoCorreoEnum.values()) {
 			cbTipoCorreo.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de genero
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarGenero() {
 		for (GeneroEnum lista : GeneroEnum.values()) {
 			cbGenero.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de tipotelefono
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarTipoTelefono() {
 		for (TipoTelefonoEnum lista : TipoTelefonoEnum.values()) {
 			cbTipoTelefono.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de maximonivel de educacion
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarMaximoNivelEducacion() {
 		for (MaximoNivelEduEnum lista : MaximoNivelEduEnum.values()) {
 			cbMaximoNivelEducativo.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de mes
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarMes() {
 		for (MesEnum lista : MesEnum.values()) {
 			cbMes.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de situacion laboral
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarSituacionLaboral() {
 		for (SituacionLaboralEnum lista : SituacionLaboralEnum.values()) {
 			cbSituacionLaboral.addItem(lista);
 		}
 	}
 
+	/**
+	 * Método para llenar el combo de tipoempresa
+	 * 
+	 * @throws Exception
+	 */
 	public void cargarTipoEmpresa() {
 		for (TipoEmpresaEnum lista : TipoEmpresaEnum.values()) {
 			cbTipoEmpresa.addItem(lista);
@@ -840,8 +880,8 @@ public class VentanaRegistroEgresados extends javax.swing.JFrame {
 				infoLaboral.setEgresado(egresado);
 				controlador.crearEgresado(egresado);
 				controlador.crearAreaEgresado(areaEgresado);
-				controlador.crearInformacionLaboral(infoLaboral);
-				controlador.crearInformacionAcademica(infoAcademica);
+//				controlador.crearInformacionLaboral(infoLaboral);
+//				controlador.crearInformacionAcademica(infoAcademica);
 
 				JOptionPane.showMessageDialog(null, "Se creo correctamente el egresado");
 			}
