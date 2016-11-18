@@ -54,6 +54,9 @@ public class VentanaEditarEmpresa extends javax.swing.JFrame implements ActionLi
 
 	}
 
+	/**
+	 * Metodo para cargar el combobox de tipo de empresa
+	 */
 	public void cargarTipoEmpresa() {
 		for (TipoEmpresaEnum lista : TipoEmpresaEnum.values()) {
 			cbTipoEmpresa.addItem(lista);
@@ -504,6 +507,9 @@ public class VentanaEditarEmpresa extends javax.swing.JFrame implements ActionLi
 
 	}// GEN-LAST:event_cbDepartamentoItemStateChanged
 
+	/**
+	 * Metodo para limpias los campos del formulario
+	 */
 	public void limpiarCampos() {
 		tfCargo.setText(null);
 		tfCorreo.setText(null);

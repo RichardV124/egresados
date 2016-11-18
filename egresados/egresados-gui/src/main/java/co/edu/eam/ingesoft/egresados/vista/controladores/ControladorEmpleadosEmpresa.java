@@ -26,6 +26,9 @@ public class ControladorEmpleadosEmpresa {
 	 */
 	private BOInformacionLaboral boInformacionLaboral;
 	
+	/**
+     * Constructor
+     */
 	public ControladorEmpleadosEmpresa() {
 		boEmpresa = new BOEmpresa();
 		boEgresado = new BOEgresado();

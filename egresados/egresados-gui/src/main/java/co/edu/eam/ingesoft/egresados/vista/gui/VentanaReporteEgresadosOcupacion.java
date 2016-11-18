@@ -24,6 +24,9 @@ import co.edu.eam.ingesoft.egresados.vista.controladores.ControladorReporteEgres
  */
 public class VentanaReporteEgresadosOcupacion extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas de reporte egresados ocupacion
+	 */
 	private ControladorReporteEgresadosOcupacion controlador;
 
 	/**
@@ -178,6 +181,9 @@ public class VentanaReporteEgresadosOcupacion extends javax.swing.JFrame {
 
 	}// GEN-LAST:event_btnGenerarActionPerformed
 
+	/**
+	 * metodo para cargar la grafica de reporte
+	 */
 	public void global(){
 		ChartPanel panel;
 		try {

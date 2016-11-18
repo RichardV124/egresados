@@ -8,6 +8,11 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOInformacionAcademicaJPA implements IDAOInformacionAcademica{
 
+	/**
+     * Método con la lógica para crear una informacion academica
+     * @param informacionAcademica, la informacionAcademica que se desea crear
+     * @throws Exception
+     */
 	public void crear(InformacionAcademica informacionAcademica) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -21,6 +26,11 @@ public class DAOInformacionAcademicaJPA implements IDAOInformacionAcademica{
 		}
 	}
 
+	/**
+     * Método con la lógica para editar una informacion academica
+     * @param informacionAcademica, la informacionAcademica que se desea editar
+     * @throws Exception
+     */
 	public void editar(InformacionAcademica informacionAcademica) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -31,6 +41,11 @@ public class DAOInformacionAcademicaJPA implements IDAOInformacionAcademica{
 		em.getTransaction().commit();
 	}
 
+	/**
+     * Método con la lógica para buscar una informacion academica
+     * @param ced, cedula del egresado que posee la informacion academica
+     * @throws Exception
+     */
 	public InformacionAcademica buscar(String ced) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();

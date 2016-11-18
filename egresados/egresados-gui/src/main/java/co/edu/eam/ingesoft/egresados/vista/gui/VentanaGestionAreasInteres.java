@@ -20,6 +20,9 @@ import co.edu.eam.ingesoft.egresados.vista.controladores.ControladorVentanaGesti
  */
 public class VentanaGestionAreasInteres extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas de areas de interes
+	 */
 	private ControladorVentanaGestionAreasInteres controlador;
 	
     /**
@@ -262,6 +265,9 @@ public class VentanaGestionAreasInteres extends javax.swing.JFrame {
 		}
     }//GEN-LAST:event_btnEditarActionPerformed
 
+    /**
+	 * Metodo para limpias los campos del formulario
+	 */
     public void limpiarCampos() {
 		tfCodigo.setText(null);
 		tfNombre.setText(null);

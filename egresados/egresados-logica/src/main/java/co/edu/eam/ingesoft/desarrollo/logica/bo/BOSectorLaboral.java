@@ -17,6 +17,9 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Se
  */
 public class BOSectorLaboral {
 
+	/**
+     * dao con los métodos de persistencia de sector laboral
+     */
 	private IDAOSectorLaboral daoSectorLaboral;
 	
 	/**

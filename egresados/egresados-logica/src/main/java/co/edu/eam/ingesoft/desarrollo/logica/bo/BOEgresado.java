@@ -25,7 +25,9 @@ public class BOEgresado {
      */
 	private IDAOEgresado daoEgresado;
 	
-	
+	/**
+     * Constructor
+     */
 	public BOEgresado() {
 		daoEgresado = new DAOEgresadoJPA();
 	}
