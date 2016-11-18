@@ -8,6 +8,11 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOContactoJPA implements IDAOContacto{
 
+	/**
+     * Método con la lógica para crear un contacto
+     * @param contacto, el contacto que se desea crear
+     * @throws Exception
+     */
 	public void crear(Contacto contacto) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -21,6 +26,11 @@ public class DAOContactoJPA implements IDAOContacto{
 		}
 	}
 
+	/**
+     * Método con la lógica para editar un contacto
+     * @param contacto, el contacto que se desea crear
+     * @throws Exception
+     */
 	public void editar(Contacto contacto) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -31,6 +41,11 @@ public class DAOContactoJPA implements IDAOContacto{
 		em.getTransaction().commit();
 	}
 
+	/**
+     * Método con la lógica para buscar un contacto
+     * @param nitEmpresa, el nit de la empresa
+     * @throws Exception
+     */
 	public Contacto buscar(String nitEmpresa) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();

@@ -36,7 +36,14 @@ import javax.swing.JOptionPane;
  */
 public class VentanaRegistroEgresados extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas
+	 */
 	private ControladorVentanaRegistroEgresados controlador;
+	
+	/**
+	 * numero actual de pagina del registro
+	 */
 	private int numPagina = 0;
 
 	/**

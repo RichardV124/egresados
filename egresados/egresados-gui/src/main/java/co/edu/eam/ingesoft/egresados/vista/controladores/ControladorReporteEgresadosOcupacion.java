@@ -21,6 +21,9 @@ public class ControladorReporteEgresadosOcupacion {
 	 */
 	private BOPrograma boPrograma;
 	
+	/**
+     * Constructor
+     */
 	public ControladorReporteEgresadosOcupacion() {
 		boInformacionLaboral = new BOInformacionLaboral();
 		boPrograma = new BOPrograma();

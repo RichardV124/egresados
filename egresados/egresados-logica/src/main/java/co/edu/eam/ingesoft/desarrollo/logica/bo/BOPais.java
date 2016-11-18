@@ -15,6 +15,9 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Pa
  */
 public class BOPais {
 
+	/**
+     * dao con los métodos de persistencia de pais
+     */
 	private IDAOPais daoPais;
  
 	/**

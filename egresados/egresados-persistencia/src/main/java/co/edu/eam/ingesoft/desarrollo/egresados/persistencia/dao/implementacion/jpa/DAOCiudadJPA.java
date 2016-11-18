@@ -12,6 +12,12 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOCiudadJPA implements IDAOCiudad{
 
+	/**
+     * Método con la lógica para listar las ciudades por su departamento
+     * @param depto,  departamneto por el cual se listaran las ciudades
+     * @return una lista con las ciudades del departamento
+     * @throws Exception 
+     */
 	public List<Ciudad> listarCiudadPorDepartamento(Departamento depto) throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
         Query query = em.createNamedQuery(Ciudad.LISTAR_CIUDADES_POR_DEPARTAMENTO);

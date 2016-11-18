@@ -59,6 +59,11 @@ public class DAOAreaInteresJPA implements IDAOAreaInteres{
 		return em.find(AreaInteres.class, codigo);
 	}
 
+	/**
+     * Método con la lógica para listar las areas de interes
+     * @return una lista con las areas de interes registradas
+     * @throws Exception 
+     */
 	public List<AreaInteres> listarAreasInteres() throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();

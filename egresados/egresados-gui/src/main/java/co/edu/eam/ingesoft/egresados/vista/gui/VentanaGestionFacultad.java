@@ -19,6 +19,9 @@ import co.edu.eam.ingesoft.egresados.vista.controladores.ControladorVentanaGesti
  */
 public class VentanaGestionFacultad extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas de la facultad
+	 */
 	private ControladorVentanaGestionFacultad controlador;
 
 	/**

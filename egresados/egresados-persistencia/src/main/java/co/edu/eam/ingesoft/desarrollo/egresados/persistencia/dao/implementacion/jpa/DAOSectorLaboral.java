@@ -11,6 +11,10 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOSectorLaboral implements IDAOSectorLaboral{
 
+	/**
+     * Método con la lógica para listar todos los sectores laborales
+     * @throws Exception
+     */
 	public List<SectorLaboral> listarSectoresLaborales() throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
 		Query query = em.createNamedQuery(SectorLaboral.CONSULTA_LISTAR_SECTORES_LABORALES);

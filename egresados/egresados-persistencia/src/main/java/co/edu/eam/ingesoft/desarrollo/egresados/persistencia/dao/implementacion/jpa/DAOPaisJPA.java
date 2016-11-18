@@ -11,6 +11,10 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOPaisJPA implements IDAOPais{
 
+	/**
+     * Método con la lógica para listar todos los paises registrados
+     * @throws Exception
+     */
 	public List<Pais> listarPais() throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
 		Query query = em.createNamedQuery(Pais.CONSULTA_LISTAR_PAISES);
