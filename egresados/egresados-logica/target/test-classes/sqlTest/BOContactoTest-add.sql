@@ -1,0 +1,1 @@
+INSERT INTO `egresados`.`t_empresa` (`NIT_EMPRESA`, `DIRECCION`, `FAX`, `RAZON_SOCIAL`, `SITIO_WEB`, `TELEFONO`, `TIPO_EMPRESA`, `ID_CIUDAD`, `ID_SECTOR`) VALUES ('1111', 'calle lindaraja', '555566', 'Los guayabos', 'www.sitioweb.com', '123331444', 'PUBLICA', '2', '2');

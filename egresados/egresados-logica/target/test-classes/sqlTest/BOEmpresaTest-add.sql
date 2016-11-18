@@ -1,0 +1,2 @@
+INSERT INTO `egresados`.`t_empresa` (`NIT_EMPRESA`, `DIRECCION`, `FAX`, `RAZON_SOCIAL`, `SITIO_WEB`, `TELEFONO`, `TIPO_EMPRESA`, `ID_CIUDAD`, `ID_SECTOR`) VALUES ('123', 'Av Bolivar', '555566', 'EAM', 'www.sitioweb.com', '123331444', 'PUBLICA', '2', '1');
+INSERT INTO `egresados`.`t_contacto` (`NIT_EMPRESA`, `CARGO_EMPRESA`, `CORREO`, `NOMBRE`, `TELEFONO`) VALUES ('123', 'Rector', 'elcorreo@gmail.com', 'Eliana Rodriguez', '123123441');

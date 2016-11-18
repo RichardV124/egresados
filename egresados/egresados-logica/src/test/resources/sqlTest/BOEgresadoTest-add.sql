@@ -1,0 +1,2 @@
+INSERT INTO `egresados`.`t_facultad` (`COD_FACULTAD`, `DESCRIPCION`, `NOMBRE`) VALUES ('123', 'diseño facultad', 'Diseño');
+INSERT INTO `egresados`.`t_programa` (`COD_PROGRAMA`, `DESCRIPCION`, `NOMBRE`, `COD_FACULTAD`) VALUES ('123', 'programa de diseño', 'Diseño', '123');

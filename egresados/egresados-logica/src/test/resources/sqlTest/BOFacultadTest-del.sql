@@ -1,0 +1,1 @@
+DELETE FROM `egresados`.`t_facultad` WHERE `COD_FACULTAD`='123';

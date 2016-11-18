@@ -1,0 +1,1 @@
+DELETE FROM `egresados`.`t_areainteres` WHERE `COD_AREA`='123';
