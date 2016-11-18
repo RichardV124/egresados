@@ -11,6 +11,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.AreaInteres;
 import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Egresado;
 import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.Empresa;
 import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.modelo.entidades.OfertaLaboral;
@@ -55,6 +56,7 @@ public class VentanaOfertasPrograma extends javax.swing.JFrame {
 			cbPrograma.addItem(programa);
 		}
 	}
+
     
     /**
      * This method is called from within the constructor to initialize the form.

@@ -63,6 +63,9 @@ public class OfertaLaboral implements Serializable {
 	@ManyToOne
 	private Programa programa;
 
+	@Column(name="CERRAR_OFERTA")
+	private boolean cerrarOferta;
+	
 	public OfertaLaboral() {
 		super();
 	}
@@ -153,6 +156,14 @@ public class OfertaLaboral implements Serializable {
 
 	public void setFechaCierre(Date fechaCierre) {
 		this.fechaCierre = fechaCierre;
+	}
+
+	public boolean isCerrarOferta() {
+		return cerrarOferta;
+	}
+
+	public void setCerrarOferta(boolean cerrarOferta) {
+		this.cerrarOferta = cerrarOferta;
 	}
 
 	
