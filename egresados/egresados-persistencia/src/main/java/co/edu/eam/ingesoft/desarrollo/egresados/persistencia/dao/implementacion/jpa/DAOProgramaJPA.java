@@ -11,6 +11,11 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAOProgramaJPA implements IDAOPrograma{
 
+	/**
+     * Método con la lógica para crear un programa
+     * @param programa, el programa que se desea crear
+     * @throws Exception
+     */
 	public void crear(Programa programa) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -24,6 +29,11 @@ public class DAOProgramaJPA implements IDAOPrograma{
 		}
 	}
 
+	/**
+     * Método con la lógica para editar un programa
+     * @param programa, el programa que se desea editar
+     * @throws Exception
+     */
 	public void editar(Programa programa) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -34,6 +44,11 @@ public class DAOProgramaJPA implements IDAOPrograma{
 		em.getTransaction().commit();
 	}
 
+	/**
+     * Método con la lógica para buscar un programa
+     * @param codigo, codigo del programa que se desea buscar
+     * @throws Exception
+     */
 	public Programa buscar(String codigo) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -41,6 +56,11 @@ public class DAOProgramaJPA implements IDAOPrograma{
 		return em.find(Programa.class, codigo);
 	}
 
+	/**
+     * Método con la lógica para listar los programas
+     * @param programa, nombre del programa que se desea buscar
+     * @throws Exception
+     */
 	public List<Programa> listarPrograma(String programa) throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
 		Query query = em.createNamedQuery(Programa.CONSULTA_LISTAR_PROGRAMAS_POR_FACULTAD);
@@ -48,6 +68,10 @@ public class DAOProgramaJPA implements IDAOPrograma{
 		return query.getResultList();
 	}
 	
+	/**
+     * Método con la lógica para listar todos los programas registrados
+     * @throws Exception
+     */
 	public List<Programa> listarProgramas() throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
 		Query query = em.createNamedQuery(Programa.CONSULTA_LISTAR_PROGRAMAS);

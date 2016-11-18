@@ -12,6 +12,11 @@ import co.edu.eam.ingesoft.desarrollo.egresados.persistencia.utilidades.Administ
 
 public class DAODepartamentoJPA implements IDAODepartamento{
 
+	/**
+     * Método con la lógica para listar los departamentos por su pais
+     * @param pais, pais por el cual se listaran los departamentos
+     * @throws Exception
+     */
 	public List<Departamento> listarDepartamentosPorPais(Pais pais) throws Exception {
 		EntityManager em = AdministradorEntityManager.getEntityManager();
         Query query = em.createNamedQuery(Departamento.LISTAR_DEPARTAMENTOS_POR_PAIS);

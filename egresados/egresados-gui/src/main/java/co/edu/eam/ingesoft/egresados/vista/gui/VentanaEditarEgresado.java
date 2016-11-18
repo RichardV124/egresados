@@ -36,7 +36,14 @@ import javax.swing.JOptionPane;
  */
 public class VentanaEditarEgresado extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas
+	 */
 	private ControladorVentanaRegistroEgresados controlador;
+	
+	/**
+	 * numero actual de pagina del registro
+	 */
 	private int numPagina = 0;
 
 	/**
@@ -829,48 +836,72 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
 		}
 	}// GEN-LAST:event_cbFacultadItemStateChanged
 
+	/**
+	 * Metodo para cargar el combobox de tipo de documento
+	 */
 	public void cargarTipoDocumento() {
 		for (TipoDocumentoEnum lista : TipoDocumentoEnum.values()) {
 			cbTipoDocumento.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de tipo de correo
+	 */
 	public void cargarTipoCorreo() {
 		for (TipoCorreoEnum lista : TipoCorreoEnum.values()) {
 			cbTipoCorreo.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de genero
+	 */
 	public void cargarGenero() {
 		for (GeneroEnum lista : GeneroEnum.values()) {
 			cbGenero.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de tipo de telefono
+	 */
 	public void cargarTipoTelefono() {
 		for (TipoTelefonoEnum lista : TipoTelefonoEnum.values()) {
 			cbTipoTelefono.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de maximo nivel educativo
+	 */
 	public void cargarMaximoNivelEducacion() {
 		for (MaximoNivelEduEnum lista : MaximoNivelEduEnum.values()) {
 			cbMaximoNivelEducativo.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de mes
+	 */
 	public void cargarMes() {
 		for (MesEnum lista : MesEnum.values()) {
 			cbMes.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de situacion laboral
+	 */
 	public void cargarSituacionLaboral() {
 		for (SituacionLaboralEnum lista : SituacionLaboralEnum.values()) {
 			cbSituacionLaboral.addItem(lista);
 		}
 	}
 
+	/**
+	 * Metodo para cargar el combobox de tipo de empresa
+	 */
 	public void cargarTipoEmpresa() {
 		for (TipoEmpresaEnum lista : TipoEmpresaEnum.values()) {
 			cbTipoEmpresa.addItem(lista);

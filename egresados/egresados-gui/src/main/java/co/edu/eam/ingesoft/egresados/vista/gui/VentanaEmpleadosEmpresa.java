@@ -22,6 +22,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class VentanaEmpleadosEmpresa extends javax.swing.JFrame {
 
+	/**
+	 * controlador de la ventana donde se encuentra las operaciones logicas de empresa
+	 */
 	private ControladorEmpleadosEmpresa controlador;
 
 	/**
@@ -56,9 +59,9 @@ public class VentanaEmpleadosEmpresa extends javax.swing.JFrame {
 	}
 
 	/**
-     * Metodo para llenar tabla
-     * @param emp, empresa por el cual se llenara la tabla
-     */
+	 * Metodo para llenas la tabla de Reportes del egresado
+	 * @param emp, empresa por la cual se listaran los egresados
+	 */
 	public void llenartabla(Empresa emp) {
 
 		try {

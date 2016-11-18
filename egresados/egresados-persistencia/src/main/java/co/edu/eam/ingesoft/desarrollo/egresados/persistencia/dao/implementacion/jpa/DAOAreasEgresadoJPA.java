@@ -31,6 +31,11 @@ public class DAOAreasEgresadoJPA implements IDAOAreasEgresado{
 		}
 	}
 
+	/**
+     * Método con la lógica para editar un area de egresado
+     * @param area, el area de egresado que se desea editar
+     * @throws Exception
+     */
 	public void editar(AreasEgresado area) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
@@ -41,6 +46,11 @@ public class DAOAreasEgresadoJPA implements IDAOAreasEgresado{
 		em.getTransaction().commit();
 	}
 
+	/**
+     * Método con la lógica para buscar un area de egresado
+     * @param area, el area de egresadi que se desea crear
+     * @throws Exception
+     */
 	public AreasEgresado buscar(AreasEgresadoPK areaEgresadoPk) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
