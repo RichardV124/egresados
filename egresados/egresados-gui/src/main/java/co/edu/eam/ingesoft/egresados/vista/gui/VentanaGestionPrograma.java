@@ -71,7 +71,7 @@ public class VentanaGestionPrograma extends javax.swing.JFrame {
 		jScrollPane1 = new javax.swing.JScrollPane();
 		taDescripcion = new javax.swing.JTextArea();
 		jLabel8 = new javax.swing.JLabel();
-		cbFacultad = new javax.swing.JComboBox<>();
+		cbFacultad = new javax.swing.JComboBox();
 		jPanel2 = new javax.swing.JPanel();
 		btnRegistrar = new javax.swing.JButton();
 		btnEditar = new javax.swing.JButton();

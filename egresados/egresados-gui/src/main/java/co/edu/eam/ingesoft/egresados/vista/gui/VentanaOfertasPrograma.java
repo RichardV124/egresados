@@ -35,7 +35,7 @@ public class VentanaOfertasPrograma extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         btnReporte = new javax.swing.JButton();
-        cbPrograma = new javax.swing.JComboBox<>();
+        cbPrograma = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
