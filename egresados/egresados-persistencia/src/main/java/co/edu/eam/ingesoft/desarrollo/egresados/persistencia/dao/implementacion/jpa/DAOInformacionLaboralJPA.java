@@ -77,7 +77,7 @@ public class DAOInformacionLaboralJPA implements IDAOInformacionLaboral{
 	public List<InformacionLaboral> listarInformacionLaboralPorPrograma(Programa p) throws Exception {
 		// TODO Auto-generated method stub
 		EntityManager em = AdministradorEntityManager.getEntityManager();
-        Query query = em.createNamedQuery(InformacionLaboral.LISTAR_INFORMACION_LABORAL);
+        Query query = em.createNamedQuery(InformacionLaboral.LISTAR_INFORMACION_LABORAL_PROGRAMA);
         query.setParameter(1, p);
         return query.getResultList();
 	}

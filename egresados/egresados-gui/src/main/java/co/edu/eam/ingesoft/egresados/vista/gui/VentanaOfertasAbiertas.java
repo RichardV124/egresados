@@ -261,7 +261,7 @@ public class VentanaOfertasAbiertas extends javax.swing.JFrame {
 					"Numero de vacantes", ds, PlotOrientation.VERTICAL, true, true, true);
 
 			panel = new ChartPanel(jf);
-			panel.setBounds(20, 20, 300, 300);
+			panel.setBounds(20, 20, 230, 230);
 
 			jPSegundo.add(panel);
 

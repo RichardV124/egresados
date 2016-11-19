@@ -184,7 +184,7 @@ System.out.println((Programa)cbPrograma.getSelectedItem());
 			double desempleado = 0;
 			double independiente = 0;
 			double empresario = 0;
-
+			System.out.println((Programa)cbPrograma.getSelectedItem());
 			int contadorEmpleado = 0;
 			int contadordDesempleado = 0;
 			int contadorIndependiente = 0;
@@ -225,7 +225,7 @@ System.out.println((Programa)cbPrograma.getSelectedItem());
 			jPSegundo.updateUI();
 
 		} catch (Exception e) {
-
+e.printStackTrace();
 		}
 
 	}// GEN-LAST:event_btnGenerarActionPerformed
