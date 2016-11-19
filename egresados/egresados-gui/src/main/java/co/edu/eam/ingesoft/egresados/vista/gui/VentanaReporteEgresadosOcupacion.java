@@ -173,11 +173,12 @@ public class VentanaReporteEgresadosOcupacion extends javax.swing.JFrame {
 
 	private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnGenerarActionPerformed
 		// TODO add your handling code here:
-System.out.println("asjdkasdjkadj");
+System.out.println((Programa)cbPrograma.getSelectedItem());
 		ChartPanel panel;
 		try {
 			Programa p = (Programa) cbPrograma.getSelectedItem();
 			List<InformacionLaboral> listaInfoLab = controlador.listarInformacionLaboralPorPrograma(p);
+			jPPrimero.removeAll();
 			jPSegundo.removeAll();
 			double empleado = 0;
 			double desempleado = 0;
@@ -219,7 +220,9 @@ System.out.println("asjdkasdjkadj");
 			panel = new ChartPanel(jf);
 			panel.setBounds(20, 50, 280, 280);
 
+			jPSegundo.removeAll();
 			jPSegundo.add(panel);
+			jPSegundo.updateUI();
 
 		} catch (Exception e) {
 
@@ -234,6 +237,7 @@ System.out.println("asjdkasdjkadj");
 		ChartPanel panel;
 		try {
 			List<InformacionLaboral> listaInfoLab = controlador.listarInformacionLaboral();
+			jPPrimero.removeAll();
 			jPSegundo.removeAll();
 			double empleado = 0;
 			double desempleado = 0;

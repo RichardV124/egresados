@@ -642,11 +642,6 @@
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
-                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
@@ -654,11 +649,6 @@
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="cbAreasInteres" min="-2" pref="216" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -696,11 +686,7 @@
                           <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="cbAreasInteres" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -816,18 +802,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel28">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#xc1;rea de conocimiento interesada*"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbAreasInteres">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

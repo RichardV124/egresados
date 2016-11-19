@@ -65,7 +65,7 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
 		controlador = new ControladorVentanaRegistroEgresados();
 		try {
 			cargarComboFacultad();
-			cargarComboAreaInteres();
+//			cargarComboAreaInteres();
 			cargarComboSectorLaboral();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -105,19 +105,19 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
 		}
 	}
 	
-	/**
-	 * Método para llenar el combo de area de interes
-	 * 
-	 * @throws Exception
-	 */
-	private void cargarComboAreaInteres() throws Exception {
-
-		List<AreaInteres> areasInteres = controlador.listarAreasInteres();
-		cbAreasInteres.addItem("Seleccione un area de interes");
-		for (AreaInteres areaInteres : areasInteres) {
-			cbAreasInteres.addItem(areaInteres);
-		}
-	}
+//	/**
+//	 * Método para llenar el combo de area de interes
+//	 * 
+//	 * @throws Exception
+//	 */
+//	private void cargarComboAreaInteres() throws Exception {
+//
+//		List<AreaInteres> areasInteres = controlador.listarAreasInteres();
+//		cbAreasInteres.addItem("Seleccione un area de interes");
+//		for (AreaInteres areaInteres : areasInteres) {
+//			cbAreasInteres.addItem(areaInteres);
+//		}
+//	}
 
 	/**
 	 * Método para llenar el combo de sector laboral
@@ -199,8 +199,6 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
         jDFechaIngreso = new com.toedter.calendar.JDateChooser();
         jPanel7 = new javax.swing.JPanel();
         jDFechaSalida = new com.toedter.calendar.JDateChooser();
-        jLabel28 = new javax.swing.JLabel();
-        cbAreasInteres = new javax.swing.JComboBox();
         btnBuscar = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
         btnSiguiente = new javax.swing.JButton();
@@ -521,8 +519,6 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jLabel28.setText("Área de conocimiento interesada*");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -543,19 +539,11 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
                             .addComponent(jLabel25)
                             .addComponent(cbSectorLaboral, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(jLabel28)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(59, 59, 59))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(cbAreasInteres, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -582,11 +570,7 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jLabel28)
-                .addGap(18, 18, 18)
-                .addComponent(cbAreasInteres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addGap(101, 101, 101))
         );
 
         jTPEgresados.addTab("3. Ocupacion actual", new javax.swing.ImageIcon(getClass().getResource("/imagenes/laboral.png")), jPanel3); // NOI18N
@@ -728,13 +712,13 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
 						tipoDocumento, genero, correo, tipoCorreo, telefono, tipoTelefono, infoAcademica, infoLaboral);
 
 				// Area de Egresado
-				AreaInteres area = (AreaInteres) cbAreasInteres.getSelectedItem();
-				AreasEgresado areaEgresado = new AreasEgresado(egresado, area);
+//				AreaInteres area = (AreaInteres) cbAreasInteres.getSelectedItem();
+//				AreasEgresado areaEgresado = new AreasEgresado(egresado, area);
 
 				infoAcademica.setEgresado(egresado);
 				infoLaboral.setEgresado(egresado);
 				controlador.editarEgresado(egresado);
-				controlador.editarAreaEgresado(areaEgresado);
+//				controlador.editarAreaEgresado(areaEgresado);
 				controlador.editarInformacionLaboral(infoLaboral);
 				controlador.editarInformacionAcademica(infoAcademica);
 
@@ -913,7 +897,6 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnSiguiente;
-    private javax.swing.JComboBox cbAreasInteres;
     private javax.swing.JComboBox cbFacultad;
     private javax.swing.JComboBox cbGenero;
     private javax.swing.JComboBox cbMaximoNivelEducativo;
@@ -947,7 +930,6 @@ public class VentanaEditarEgresado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

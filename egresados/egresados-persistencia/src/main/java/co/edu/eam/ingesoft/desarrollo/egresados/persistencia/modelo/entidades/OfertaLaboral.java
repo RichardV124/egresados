@@ -68,6 +68,7 @@ public class OfertaLaboral implements Serializable {
 	
 	public OfertaLaboral() {
 		super();
+		this.cerrarOferta = false;
 	}
 
 	public int getId() {
