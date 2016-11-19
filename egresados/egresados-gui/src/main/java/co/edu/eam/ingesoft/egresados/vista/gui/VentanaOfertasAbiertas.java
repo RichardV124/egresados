@@ -219,6 +219,43 @@ public class VentanaOfertasAbiertas extends javax.swing.JFrame {
 
 	private void cbAreaItemStateChanged(java.awt.event.ItemEvent evt) {// GEN-FIRST:event_cbAreaItemStateChanged
 		// TODO add your handling code here:
+		ChartPanel panel;
+		try {
+			Programa programa = (Programa) cbPrograma.getSelectedItem();
+			
+			List<OfertaLaboral> listaOfertaLab = controlador.listarOfertas(programa);
+			
+			int contador = 0;
+			AreaInteres areaAnterior = null;
+			DefaultCategoryDataset ds = new DefaultCategoryDataset();
+
+			for (int i = 0; i < listaOfertaLab.size(); i++) {
+				jPPrimero.removeAll();
+				// Validacion de oferta
+				if (listaOfertaLab.get(i).isCerrarOferta() == false) {
+					areaAnterior = listaOfertaLab.get(i).getAreaInteres();
+					for (int j = 0; j < listaOfertaLab.size(); j++) {
+						if (listaOfertaLab.get(j).getAreaInteres() == areaAnterior) {
+							contador++;
+						}
+					}
+					ds.addValue(contador, listaOfertaLab.get(i).getDescripcion(),
+							listaOfertaLab.get(i).getDescripcion());
+					contador = 0;
+				}
+			}
+
+			JFreeChart jf = ChartFactory.createBarChart3D("Reporte de ofertas abiertas", "Nombre de las ofertas",
+					"Numero de vacantes", ds, PlotOrientation.VERTICAL, true, true, true);
+
+			panel = new ChartPanel(jf);
+			panel.setBounds(20, 20, 230, 230);
+
+			jPPrimero.add(panel);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}            
 	}// GEN-LAST:event_cbAreaItemStateChanged
 
 	/**
@@ -234,8 +271,6 @@ public class VentanaOfertasAbiertas extends javax.swing.JFrame {
 			Programa programa = (Programa) cbPrograma.getSelectedItem();
 			
 			List<OfertaLaboral> listaOfertaLab = controlador.listarOfertas(programa);
-
-			
 			
 			int contador = 0;
 			AreaInteres areaAnterior = null;
@@ -251,8 +286,8 @@ public class VentanaOfertasAbiertas extends javax.swing.JFrame {
 							contador++;
 						}
 					}
-					ds.addValue(contador, listaOfertaLab.get(i).getAreaInteres().getNombre(),
-							listaOfertaLab.get(i).getAreaInteres().getNombre());
+					ds.addValue(contador, listaOfertaLab.get(i).getDescripcion(),
+							listaOfertaLab.get(i).getDescripcion());
 					contador = 0;
 				}
 			}
